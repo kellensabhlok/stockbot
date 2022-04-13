@@ -5,8 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stockbot</title>
+    <!-- install bootstrap from cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- also install jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- also install bootstrap js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- also install font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- import the index.css -->
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Earnings Analyzer</h1>
+            <p>A simple stock dashboard</p>
+
+            <!-- create a form to enter a ticker symbol and company name, execute main.py when the button is clicked-->
+            <form action="main.py" method="post">
+                <div class="form-group">
+                    <label for="ticker">Ticker Symbol</label>
+                    <input type="text" class="form-control" id="ticker" name="ticker" placeholder="Enter ticker symbol">
+                </div>
+                <div class="form-group">
+                    <label for="company">Company Name</label>
+                    <input type="text" class="form-control" id="company" name="company" placeholder="Enter company name">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-6 col-lg-4 col-sm-11 a">
+                <h1>Sevi's Indicators</h1>
+                
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-11 b">
+                <h1>Thomas' Indicators</h1>
+                
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-11 c">
+                <h1>Kellen's Indicators</h1>
+                
+            </div>
+        </div>
+    </div>
 </body>
 </html>
