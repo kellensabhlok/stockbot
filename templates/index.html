@@ -24,13 +24,15 @@
             <h1>Earnings Analyzer</h1>
             <p>A simple stock dashboard</p>
 
-            <!-- create a form to enter a ticker symbol for a stock, when you hit enter it redirects to the stock page. For example, if they input AAPL, it redirects to the /aapl page -->
-            <form action="/stock" method="post">
+            <!-- create a form to enter a ticker symbol for a stock, when you hit enter it redirects to the page you inputted. For example, if they input AAPL,
+                 it redirects to the /aapl page. If you enter SPY, it goes to /spy -->
+            <form action="/">
                 <div class="form-group">
-                    <label for="ticker">Ticker Symbol</label>
-                    <input type="text" class="form-control" id="ticker" name="ticker" placeholder="AAPL">
+                    <input type="text" class="form-control" name="ticker" placeholder="Enter a ticker symbol">
                 </div>
-                <button type="submit" class="btn btn-default">Submit</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+           
             
         </div>
     </div>
