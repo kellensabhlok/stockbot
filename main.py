@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
-# import module.py in the modules folder
-from modules.module import get_name
 
+# institutional ownership module
+from modules.get_institutional_ownership import institutional_ownership
 
 app = Flask(__name__)
 
@@ -13,7 +13,7 @@ def index(stock_name='AAPL'):
     stock_name = request.args.get('ticker')
 
 
-    test = "hi"
+    test = institutional_ownership(stock_name)
     # show the user the index.html page from the template folder
     return render_template('index.html', stock_name=stock_name, test=test)
 
