@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stockbot</title>
+    <!-- install bootstrap from cdn -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- also install jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- also install bootstrap js -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- also install font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <!-- import the index.css -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css')}}">
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Earnings Analyzer</h1>
+            <p>A simple stock dashboard</p>
+
+            <!-- create a form to enter a ticker symbol for a stock, when you hit enter it redirects to the page you inputted. For example, if they input AAPL,
+                 it redirects to the /aapl page. If you enter SPY, it goes to /spy -->
+            <form action="/">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="ticker" placeholder="Enter a ticker symbol">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+           
+            
+        </div>
+    </div>
+
+
+    <center ><h1 style="font-size: 70px">Stock: ${{stock_name}}</h1></center>
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-6 col-lg-4 col-sm-11 a">
+                <h1>Sevi's Indicators</h1>
+                <hr>
+                <h2>Institutional Ownership: ${{test}}</h2>
+                
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-11 b">
+                <h1>Thomas' Indicators</h1>
+                
+            </div>
+            <div class="col-md-4 col-lg-4 col-sm-11 c">
+                <h1>Kellen's Indicators</h1>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
